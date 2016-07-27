@@ -15,7 +15,7 @@ ABC is a music format that, while being able to encode all sorts of scores, is e
 strong at representing monophonic music, and folk music in particular.
 
 Modules in the `music21.abcFormat` package deal with importing ABC into music21.  Most people
-working with ABC data won't need to use this package.  To convert ABC from a file or URL 
+working with ABC data won't need to us:e this package.  To convert ABC from a file or URL
 to a :class:`~music21.stream.Stream` use the :func:`~music21.converter.parse` function of
 the `converter` module: 
 
@@ -1397,7 +1397,8 @@ class ABCNote(ABCToken):
 
         # assume we have a complete fraction
         elif '/' in numStr:
-            n, d = numStr.split('/')
+            frac = numStr.split('/')
+            n, d = frac[:2]
             n = int(n.strip())
             d = int(d.strip())
             ql = activeDefaultQuarterLength * (float(n) / d)
