@@ -856,7 +856,7 @@ class AskInstall(YesOrNo):
             stdoutSrc = sys.stdout
             #stderrSrc = sys.stderr
 
-            fileLikeOpen = StringIO.StringIO()
+            fileLikeOpen = StringIO()
             sys.stdout = fileLikeOpen
 
             directory, unused_fn = os.path.split(fp)
